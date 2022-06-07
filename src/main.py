@@ -61,4 +61,6 @@ while game.can_run():
         )
     )
 
+    print("")
+
     time.sleep(1)

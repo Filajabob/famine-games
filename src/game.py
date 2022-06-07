@@ -113,6 +113,7 @@ class Game:
         if result_num <= 25 + offensive_player.offense - defensive_player.defense:
             self.eliminate_player(defensive_player)
             self.update_stats(offensive_player, "total_kills", 1)
+            self.update_stats(offensive_player, "attempted_attacks", 1)
             winner = offensive_player
             case = 1
 
