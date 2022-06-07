@@ -13,7 +13,7 @@ class Game:
                                          Default: Constants.INTERVENTION_RATE
         """
 
-        self.players = players # A simple list of players, not including any stats (see src.game.Game.stats)
+        self.players = players  # A simple list of players, not including any stats (see src.game.Game.stats)
         self.player_archive = players  # A list of players that is not changed, so we can do cool statistics stuff
         # and other things.
         self.intervention_rate = intervention_rate
@@ -32,6 +32,15 @@ class Game:
                 "alive": True  # if the player is alive
             }
 
+    def can_run(self):
+        """
+        Checks if the game can still go on.
+
+        :return: bool: True if the game can continue, and False otherwise
+        """
+
+        return len(self.players) > 1
+
     def eliminate_player(self, player: Player):
         """
         Eliminate a player and add to stats. Alternative to self.player.remove(player) and switching alive to False in
@@ -46,6 +55,7 @@ class Game:
     def rotate(self, offensive_player: Player = None, defensive_player: Player = None):
         """
         Rotate to the next "turn"
+
         :param offensive_player: src.player.Player: The offending (or attacking) player
         :param defensive_player: src.player.Player: The defending (or the attacked) player
         :return: dict: A dictionary with all the events that occurred during the turn.
@@ -91,13 +101,13 @@ class Game:
         result_num = random.randint(1, 100)
 
         # Case 1: the attacker wins and eliminates the defender
-        if result_num <= 25 + offensive_player.attack - defensive_player.defense:
+        if result_num <= 25 + offensive_player.offense - defensive_player.defense:
             self.eliminate_player(defensive_player)
             winner = offensive_player
             case = 1
 
         # Case 2: the defender wins and eliminates the attacker
-        elif result_num <= 50 - offensive_player.attack + defensive_player.defense:
+        elif result_num <= 50 - offensive_player.offense + defensive_player.defense:
             self.eliminate_player(offensive_player)
             winner = defensive_player
             case = 2
