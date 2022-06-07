@@ -80,7 +80,7 @@ class Game:
             defensive_player = random.choice(self.players)
 
             # Ensure we don't get self-battles
-            while defensive_player != offensive_player:
+            while defensive_player == offensive_player:
                 defensive_player = random.choice(self.players)
 
         # --- Actual battle logic ---
