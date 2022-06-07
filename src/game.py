@@ -3,8 +3,9 @@ import fractions
 from player import Player
 from constants import Constants
 
+
 class Game:
-    def __init__(self, players: list, *, intervention_rate: float=Constants.INTERVENTION_RATE):
+    def __init__(self, players: list, *, intervention_rate: float = Constants.INTERVENTION_RATE):
         """
         A game where all the fun stuff happens
         :param players: list: A list of src.player.Player objects
@@ -12,15 +13,47 @@ class Game:
                                          Default: Constants.INTERVENTION_RATE
         """
 
-        self.players = players
+        self.players = players # A simple list of players, not including any stats (see src.game.Game.stats)
+        self.player_archive = players  # A list of players that is not changed, so we can do cool statistics stuff
+        # and other things.
         self.intervention_rate = intervention_rate
+        self.stats = {}  # Only accounting for this game
 
-    def rotate(self, offensive_player: Player=None, defensive_player: Player=None):
+        for player in self.players:
+            self.stats[player.name] = {
+                "total_kills": 0,  # total kills
+                "successful_defenses": 0,  # amount of times this player survived an attack
+                "attempted_attacks": 0,
+                "attempted_defenses": 0,
+                "kills_off_attacks": 0,  # amount of kills from attacks
+                "kills_off_defenses": 0,  # amount of kills from self-defense (defending)
+                "kills_off_interventions": 0,  # amount of kills from interventions,
+                "rounds_survived": 0,  # amount of rounds survived
+                "alive": True  # if the player is alive
+            }
+
+    def eliminate_player(self, player: Player):
+        """
+        Eliminate a player and add to stats. Alternative to self.player.remove(player) and switching alive to False in
+        self.stats
+        :param player: src.player.Player: The player to eliminate
+        :return: None
+        """
+
+        self.players.remove(player)
+        self.stats[player.name]["alive"] = False
+
+    def rotate(self, offensive_player: Player = None, defensive_player: Player = None):
         """
         Rotate to the next "turn"
         :param offensive_player: src.player.Player: The offending (or attacking) player
         :param defensive_player: src.player.Player: The defending (or the attacked) player
-        :return:
+        :return: dict: A dictionary with all the events that occurred during the turn.
+            The case is an integer, which is like an exit code, that describes what happened.
+                0: No one dies (nothing happened besides stat updates)
+                1: The attacker eliminates the defender
+                2: The defender eliminates the attacker
+                3: Everyone is eliminated
         """
 
         # --- Choosing/checking the two parties involved ---
@@ -41,7 +74,50 @@ class Game:
 
         # --- Actual battle logic ---
 
-        # Someone will intervene!
         # We ask for a random int between 1 and the second int in the ratio form of self.intervention_rate
         if random.randint(1, self.intervention_rate.as_integer_ratio()[1]) == 1:
-            pass
+            # Someone will intervene!
+            intervener = random.choice(self.players)
+
+            # Ensure the intervener is not one of the parties already "in combat"
+            while intervener not in (offensive_player, defensive_player):
+                intervener = random.choice(self.players)
+        else:
+            # No intervener this turn
+            intervener = None
+
+        # If the random int between 1 and 100 is less than 25 + attacker's attack score - defender's defend score,
+        # than the attacker wins.
+        result_num = random.randint(1, 100)
+
+        # Case 1: the attacker wins and eliminates the defender
+        if result_num <= 25 + offensive_player.attack - defensive_player.defense:
+            self.eliminate_player(defensive_player)
+            winner = offensive_player
+            case = 1
+
+        # Case 2: the defender wins and eliminates the attacker
+        elif result_num <= 50 - offensive_player.attack + defensive_player.defense:
+            self.eliminate_player(offensive_player)
+            winner = defensive_player
+            case = 2
+
+        # Case 3: everyone dies
+        elif result_num <= 75:
+            self.eliminate_player(offensive_player)
+            self.eliminate_player(defensive_player)
+            winner = None
+            case = 3
+
+        # Case 0: no one dies (note we went back to 0)
+        else:
+            winner = None
+            case = 0
+
+        return {
+            "attacker": offensive_player,
+            "defender": defensive_player,
+            "intervener": intervener,
+            "case": case,
+            "winner": winner
+        }
