@@ -8,3 +8,4 @@ for letter in list(word):
     time.sleep(0.1)
 
 student_num = input("How many students do you want to got to hell- I mean the Famine Games.")
+
