@@ -53,6 +53,12 @@ class Game:
         self.players.remove(player)
         self.stats[player.name]["alive"] = False
 
+    def update_stats(self, player: Player, stat_name: str, change: float = None, *, value=None):
+        if change:
+            self.stats[player.name][stat_name] += change
+        elif value:
+            self.stats[player.name][stat_name] = value
+
     def rotate(self, offensive_player: Player = None, defensive_player: Player = None):
         """
         Rotate to the next "turn"
@@ -101,9 +107,12 @@ class Game:
         # than the attacker wins.
         result_num = random.randint(1, 100)
 
+        # TODO: Add stats updates
+
         # Case 1: the attacker wins and eliminates the defender
         if result_num <= 25 + offensive_player.offense - defensive_player.defense:
             self.eliminate_player(defensive_player)
+            self.update_stats(offensive_player, "total_kills", 1)
             winner = offensive_player
             case = 1
 
