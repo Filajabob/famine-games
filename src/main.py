@@ -21,9 +21,7 @@ while game.can_run():
     turn_results = game.rotate()
     utils.typewriter_print(f"{turn_results['attacker'].name} attacks {turn_results['defender'].name}")
 
-    try:
-        utils.typewriter_print(f"{turn_results['winner'].name} wins.")
-    except AttributeError:
-        utils.typewriter_print("No one wins")
+    if turn_results["case"] == 0:
+        pass
 
     time.sleep(1)

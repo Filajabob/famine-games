@@ -48,6 +48,7 @@ class Game:
         :param player: src.player.Player: The player to eliminate
         :return: None
         """
+        print(self.players)
 
         self.players.remove(player)
         self.stats[player.name]["alive"] = False
@@ -113,13 +114,14 @@ class Game:
             case = 2
 
         # Case 3: everyone dies
-        elif result_num <= 75:
+        elif result_num <= 75 and len(self.players) > 2:
             self.eliminate_player(offensive_player)
             self.eliminate_player(defensive_player)
             winner = None
             case = 3
 
         # Case 0: no one dies (note we went back to 0)
+        # This is also to ensure that something happens in this turn
         else:
             winner = None
             case = 0
