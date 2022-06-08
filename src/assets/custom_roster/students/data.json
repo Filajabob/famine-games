@@ -103,8 +103,8 @@
     },
     "Spencer": {
         "name": "Spencer",
-        "offense": 0,
-        "defense": 0,
+        "offense": -5,
+        "defense": 5,
         "stats": {
             "total_kills": 1,
             "successful_defenses": 1,
@@ -137,8 +137,8 @@
     },
     "Tanmeet": {
         "name": "Tanmeet",
-        "offense": 0,
-        "defense": 0,
+        "offense": 7,
+        "defense": -7,
         "stats": {
             "total_kills": 0,
             "successful_defenses": 0,
@@ -273,8 +273,8 @@
     },
     "Turner": {
         "name": "Turner",
-        "offense": 0,
-        "defense": 0,
+        "offense": 5,
+        "defense": 5,
         "stats": {
             "total_kills": 0,
             "successful_defenses": 0,
