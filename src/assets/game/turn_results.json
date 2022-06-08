@@ -1,6 +1,6 @@
 {
-  "0": ["{o} tripped while trying to assault {d}. Nothing happened except for minor embarrassment."],
+  "0": ["{o} tripped while trying to assault {d}. Nothing happened except for minor embarrassment.", "{o} tried to attack {d}, but they got a boner and had to retreat."],
   "1": ["{o} killed {d}, {d}'s blood spilling onto the soil"],
   "2": ["{o} failed, now {d} gets mad, and {o}'s blood spills"],
-  "3": ["{o} stabbed {d}, but {d} isn't dead yet, and stabs {o} back. They both died of their wounds."]
+  "3": ["{o} stabbed {d}, but {d} isn't dead yet, and stabs {o} back. They both died of their wounds.", "They both run into eachother and they fall off a cliff. How romantic (Unless Lucas is in it then its not romantic)", ""]
 }
