@@ -13,9 +13,10 @@ args = parser.parse_args()
 
 players = []
 
-utils.typewriter_print("Welcome to the starvation games!")
+utils.typewriter_print("Welcome to the Famine Games!")
 
 if args.students:
+    utils.typewriter_print("Loading students of R7G...")
     with open("assets/custom_roster/students/names.json", 'r') as f:
         names = json.load(f)  # sussy amogus
 
@@ -30,8 +31,9 @@ else:
         name = utils.typewriter_input(f"Player #{i}: ")
         players.append(Player(name))
 
-utils.typewriter_print("Good! Time to start!")
-utils.typewriter_print("Disclaimer: No harm or offense is intended.\n")
+    utils.typewriter_print("Good! Time to start!")
+
+utils.typewriter_print("Disclaimer: No harm or offense is intended.", end='\n')
 
 game = Game(players)
 
