@@ -18,6 +18,7 @@ class Game:
         # and other things.
         self.intervention_rate = intervention_rate
         self.stats = {}  # Only accounting for this game
+        self.manually_finished = False
 
         for player in self.players:
             self.stats[player.name] = {
@@ -25,7 +26,8 @@ class Game:
                 "successful_defenses": 0,  # amount of times this player survived an attack
                 "attempted_attacks": 0,
                 "attempted_defenses": 0,
-                "kills_off_attacks": 0,  # amount of kills from attacks
+                "attempted_interventions": 0,
+                "kills_off_attacks": 0,  # amount of kills from attacks, also the amount of successful attacks
                 "kills_off_defenses": 0,  # amount of kills from self-defense (defending)
                 "kills_off_interventions": 0,  # amount of kills from interventions,
                 "rounds_survived": 0,  # amount of rounds survived
@@ -39,7 +41,7 @@ class Game:
         :return: bool: True if the game can continue, and False otherwise
         """
 
-        return len(self.players) > 1
+        return len(self.players) > 1 and not self.manually_finished
 
     def eliminate_player(self, player: Player):
         """
@@ -48,7 +50,6 @@ class Game:
         :param player: src.player.Player: The player to eliminate
         :return: None
         """
-        print(self.players)
 
         self.players.remove(player)
         self.stats[player.name]["alive"] = False
@@ -56,8 +57,22 @@ class Game:
     def update_stats(self, player: Player, stat_name: str, change: float = None, *, value=None):
         if change:
             self.stats[player.name][stat_name] += change
+            player.stats[stat_name] += change
         elif value:
             self.stats[player.name][stat_name] = value
+            player.stats[stat_name] = value
+
+    def finish_game(self):
+        """
+        Serialize all stats and finish the game.
+
+        :return: None
+        """
+
+        for player in self.player_archive:
+            player.serialize(file=player.json_file, player_name=player.name)
+
+        self.manually_finished = True
 
     def rotate(self, offensive_player: Player = None, defensive_player: Player = None):
         """
@@ -107,32 +122,54 @@ class Game:
         # than the attacker wins.
         result_num = random.randint(1, 100)
 
-        # TODO: Add stats updates
-
         # Case 1: the attacker wins and eliminates the defender
         if result_num <= 25 + offensive_player.offense - defensive_player.defense:
+            # Eliminate the defensive player (aka defender or victim)
             self.eliminate_player(defensive_player)
+
+            # Update stats
             self.update_stats(offensive_player, "total_kills", 1)
             self.update_stats(offensive_player, "attempted_attacks", 1)
+            self.update_stats(offensive_player, "kills_off_attacks", 1)
+
             winner = offensive_player
             case = 1
 
         # Case 2: the defender wins and eliminates the attacker
         elif result_num <= 50 - offensive_player.offense + defensive_player.defense:
+            # Eliminate the offensive player (aka attacker)
             self.eliminate_player(offensive_player)
+
+            # Update stats
+            self.update_stats(defensive_player, "total_kills", 1)
+            self.update_stats(defensive_player, "successful_defenses", 1)
+            self.update_stats(defensive_player, "attempted_defenses", 1)
+            self.update_stats(defensive_player, "kills_off_defenses", 1)
+
             winner = defensive_player
             case = 2
 
         # Case 3: everyone dies
         elif result_num <= 75 and len(self.players) > 2:
+            # Eliminate offensive and defensive players
             self.eliminate_player(offensive_player)
             self.eliminate_player(defensive_player)
+
+            # Update stats
+            self.update_stats(offensive_player, "attempted_attacks", 1)
+            self.update_stats(defensive_player, "attempted_defenses", 1)
+
             winner = None
             case = 3
 
         # Case 0: no one dies (note we went back to 0)
-        # This is also to ensure that something happens in this turn
+        # This is also to ensure that something happens in this turn, instead of not fitting a condition and having
+        # nothing happen
         else:
+            # Update stats
+            self.update_stats(offensive_player, "attempted_attacks", 1)
+            self.update_stats(defensive_player, "attempted_defenses", 1)
+
             winner = None
             case = 0
 
