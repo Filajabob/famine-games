@@ -88,3 +88,5 @@ while game.can_run():
     day += 1
 
 game.finish_game()
+
+utils.typewriter_print(f"The game has finished! The winner is {game.players[0].name}!")

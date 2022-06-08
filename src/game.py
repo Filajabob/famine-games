@@ -173,6 +173,10 @@ class Game:
             winner = None
             case = 0
 
+        # Increase amount of rounds survived by 1
+        for player in self.players:
+            self.update_stats(player, "rounds_survived", 1)
+
         return {
             "attacker": offensive_player,
             "defender": defensive_player,
