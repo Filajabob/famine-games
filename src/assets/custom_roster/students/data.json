@@ -1,0 +1,495 @@
+{
+    "Elliot": {
+        "name": "Elliot",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Saad": {
+        "name": "Saad",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Aisha": {
+        "name": "Aisha",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Lana": {
+        "name": "Lana",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Lamees": {
+        "name": "Lamees",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Raber": {
+        "name": "Raber",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Spencer": {
+        "name": "Spencer",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Xander": {
+        "name": "Xander",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Tanmeet": {
+        "name": "Tanmeet",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Milix": {
+        "name": "Milix",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Muhammad": {
+        "name": "Muhammad",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Malik": {
+        "name": "Malik",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Vissar": {
+        "name": "Vissar",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Phosa": {
+        "name": "Phosa",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Daryn": {
+        "name": "Daryn",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Sam": {
+        "name": "Sam",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Turner": {
+        "name": "Turner",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Bushra": {
+        "name": "Bushra",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Huda": {
+        "name": "Huda",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Nosa": {
+        "name": "Nosa",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Emama": {
+        "name": "Emama",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Jackson": {
+        "name": "Jackson",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Maryam": {
+        "name": "Maryam",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Sabiq": {
+        "name": "Sabiq",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Ky": {
+        "name": "Ky",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Asim": {
+        "name": "Asim",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Angela": {
+        "name": "Angela",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Lucas": {
+        "name": "Lucas",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    },
+    "Liam": {
+        "name": "Liam",
+        "offense": 0,
+        "defense": 0,
+        "stats": {
+            "total_kills": 0,
+            "successful_defenses": 0,
+            "attempted_attacks": 0,
+            "attempted_defenses": 0,
+            "kills_off_attacks": 0,
+            "kills_off_defenses": 0,
+            "kills_off_interventions": 0,
+            "rounds_survived": 0,
+            "wins": 0,
+            "total_games": 0
+        }
+    }
+}
