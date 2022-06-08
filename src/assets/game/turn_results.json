@@ -1,6 +1,13 @@
 {
-  "0": ["{o} tripped while trying to assault {d}. Nothing happened except for minor embarrassment.", "{o} tried to attack {d}, but they got a boner and had to retreat."],
-  "1": ["{o} killed {d}, {d}'s blood spilling onto the soil"],
-  "2": ["{o} failed, now {d} gets mad, and {o}'s blood spills"],
-  "3": ["{o} stabbed {d}, but {d} isn't dead yet, and stabs {o} back. They both died of their wounds.", "They both run into eachother and they fall off a cliff. How romantic (Unless Lucas is in it then its not romantic)", ""]
+  "0": ["{o} tripped while trying to assault {d}. Nothing happened except for minor embarrassment.",
+    "{o} tries to attack {d}, but they got a boner and had to retreat.", "{o} gets scared and runs away like a wimp",
+    "{o} tries to impale {d}, but a janitor forced them to settle their differences peacefully (that janitor doesn't want to clean up the blood, eh?)"],
+  "1": ["{o} killed {d}, {d}'s blood spilling onto the soil",
+    "{o} slaughtered {d}, {d}'s cries of pain still ringing in {o}'s ears.",
+    "{d}'s blood spills off a cliff as {o} stands triumphantly above"],
+  "2": ["{o} failed, now {d} gets mad, and {o}'s blood spills",
+    "{o} loses grip of their sword, and {d} takes the opportunity to exact their revenge. {o} won't survive this."],
+  "3": ["{o} stabbed {d}, but {d} isn't dead yet, and stabs {o} back. They both died of their wounds.",
+    "They both run into each other and they fall off a cliff. How romantic. And tragic.",
+    "{o} was about to stab {d}, but {o} falls in love with {d}, but {d} fell into a ravine in front of {o}'s eyes. {o} jumps into the ravine, overflowing with grief."]
 }

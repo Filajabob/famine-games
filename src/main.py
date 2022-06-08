@@ -33,7 +33,7 @@ else:
 
     utils.typewriter_print("Good! Time to start!")
 
-utils.typewriter_print("Disclaimer: No harm or offense is intended.", end='\n')
+utils.typewriter_print("Disclaimer: No harm or offense is intended. May contain inappropriate or offensive content.", end='\n')
 
 game = Game(players)
 

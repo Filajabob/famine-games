@@ -14,7 +14,7 @@ class Game:
         """
 
         self.players = players  # A simple list of players, not including any stats (see src.game.Game.stats)
-        self.player_archive = players  # A list of players that is not changed, so we can do cool statistics stuff
+        self.player_archive = self.players  # A list of players that is not changed, so we can do cool statistics stuff
         # and other things.
         self.intervention_rate = intervention_rate
         self.stats = {}  # Only accounting for this game
@@ -51,7 +51,7 @@ class Game:
         :return: None
         """
 
-        self.players.remove(player)
+        self.players = [_player for _player in self.players if _player.name != player.name]
         self.stats[player.name]["alive"] = False
 
     def update_stats(self, player: Player, stat_name: str, change: float = None, *, value=None):
@@ -70,7 +70,7 @@ class Game:
         """
 
         for player in self.player_archive:
-            player.serialize(file=player.json_file, player_name=player.name)
+            player.serialize(file=player.json_file)
 
         self.manually_finished = True
 
