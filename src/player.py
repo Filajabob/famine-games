@@ -2,7 +2,7 @@ import json
 
 
 class Player:
-    def __init__(self, name: str, offense: int = 0, defense: int = 0, json_file: str = None, stats: dict = None):
+    def __init__(self, name: str, offense: int = 0, defense: int = 0, intervention_score: int = 0, json_file: str = None, stats: dict = None):
         """
         Object that holds data for a certain someone in a src.game.Game
         When Player is initialized via __init__, it will be assumed that this player is a new player. Load from
@@ -17,6 +17,7 @@ class Player:
         self.name = name
         self.offense = offense
         self.defense = defense
+        self.intevention_score = intervention_score
 
         self.json_file = json_file
 
@@ -46,6 +47,7 @@ class Player:
                 "name": self.name,
                 "offense": self.offense,
                 "defense": self.defense,
+                "intervention_score": self.intevention_score,
                 "stats": self.stats
             }
 

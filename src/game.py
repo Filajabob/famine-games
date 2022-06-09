@@ -54,6 +54,10 @@ class Game:
         self.players = [_player for _player in self.players if _player.name != player.name]
         self.stats[player.name]["alive"] = False
 
+    def eliminate_players(self, *players: Player):
+        for player in players:
+            self.eliminate_player(player)
+
     def update_stats(self, player: Player, stat_name: str, change: float = None, *, value=None):
         if change:
             self.stats[player.name][stat_name] += change
@@ -82,6 +86,11 @@ class Game:
         :param defensive_player: src.player.Player: The defending (or the attacked) player
         :return: dict: A dictionary with all the events that occurred during the turn.
             The case is an integer, which is like an exit code, that describes what happened.
+            Positive is something involving the two parties, and negative is something involving more or none of them.
+                -4: Intervener gets killed by the offender and the defender
+                -3: Intervener kills the offender (attacker)
+                -2: Intervener kills the defender
+                -1: Intervener kills everyone
                 0: No one dies (nothing happened besides stat updates)
                 1: The attacker eliminates the defender
                 2: The defender eliminates the attacker
@@ -114,82 +123,111 @@ class Game:
             # Ensure the intervener is not one of the parties already "in combat"
             while intervener not in (offensive_player, defensive_player):
                 intervener = random.choice(self.players)
+
+            result_num = random.randint(1, 100)
+
+            # TODO: Add intervention stuff
+
+            # Case -1: Intervener kills everyone
+            if result_num <= 20 + intervener.intervention_score - \
+                    ((offensive_player.defense + defensive_player.defense) / 2):
+
+                # Update stats
+
+                # Update attacker defense score
+                offensive_player.defense -= round(random.uniform(0.05, 0.2), 2)
+                # Update defensive defense score
+                defensive_player.defense -= round(random.uniform(0.05, 0.2), 2)
+                # Update intervener intervention score
+                intervener.intervention_score += round(random.uniform(0.25, 0.75), 2)
+
+                # Update stats
+                self.update_stats(intervener, "total_kills", 2)
+                self.update_stats(intervener, "attempted_interventions", 1)
+                self.update_stats(intervener, "kills_off_interventions", 2)
+
+                self.update_stats(offensive_player, "attempted_defenses", 1)
+                self.update_stats(defensive_player, "attempted_defenses", 1)
+
+                # Eliminate players
+                self.eliminate_players(offensive_player, defensive_player)
+
         else:
             # No intervener this turn
             intervener = None
 
-        # If the random int between 1 and 100 is less than 25 + attacker's attack score - defender's defend score,
-        # than the attacker wins.
-        result_num = random.randint(1, 100)
+            # If the random int between 1 and 100 is less than 25 + attacker's attack score - defender's defend score,
+            # than the attacker wins.
+            result_num = random.randint(1, 100)
 
-        # Case 1: the attacker wins and eliminates the defender
-        if result_num <= 25 + offensive_player.offense - defensive_player.defense:
-            # Eliminate the defensive player (aka defender or victim)
-            self.eliminate_player(defensive_player)
+            # Case 1: the attacker wins and eliminates the defender
+            if result_num <= 25 + offensive_player.offense - defensive_player.defense:
+                # Eliminate the defensive player (aka defender or victim)
+                self.eliminate_player(defensive_player)
 
-            # Update stats
-            self.update_stats(offensive_player, "total_kills", 1)
-            self.update_stats(offensive_player, "attempted_attacks", 1)
-            self.update_stats(offensive_player, "kills_off_attacks", 1)
+                # Update stats
+                self.update_stats(offensive_player, "total_kills", 1)
+                self.update_stats(offensive_player, "attempted_attacks", 1)
+                self.update_stats(offensive_player, "kills_off_attacks", 1)
 
-            # Update attacker attack score
-            offensive_player.offense += round(random.uniform(0.25, 0.75), 2)
+                # Update attacker attack score
+                offensive_player.offense += round(random.uniform(0.25, 0.75), 2)
 
-            # Update defensive defense score
-            defensive_player.defense -= round(random.uniform(0.05, 0.2), 2)
+                # Update defensive defense score
+                defensive_player.defense -= round(random.uniform(0.05, 0.2), 2)
 
-            winner = offensive_player
-            case = 1
+                winner = offensive_player
+                case = 1
 
-        # Case 2: the defender wins and eliminates the attacker
-        elif result_num <= 50 - offensive_player.offense + defensive_player.defense:
-            # Eliminate the offensive player (aka attacker)
-            self.eliminate_player(offensive_player)
+            # Case 2: the defender wins and eliminates the attacker
+            elif result_num <= 50 - offensive_player.offense + defensive_player.defense:
+                # Eliminate the offensive player (aka attacker)
+                self.eliminate_player(offensive_player)
 
-            # Update stats
-            self.update_stats(defensive_player, "total_kills", 1)
-            self.update_stats(defensive_player, "successful_defenses", 1)
-            self.update_stats(defensive_player, "attempted_defenses", 1)
-            self.update_stats(defensive_player, "kills_off_defenses", 1)
+                # Update stats
+                self.update_stats(defensive_player, "total_kills", 1)
+                self.update_stats(defensive_player, "successful_defenses", 1)
+                self.update_stats(defensive_player, "attempted_defenses", 1)
+                self.update_stats(defensive_player, "kills_off_defenses", 1)
 
-            # Update attacker attack score
-            defensive_player.defense += round(random.uniform(0.25, 0.75), 2)
+                # Update attacker attack score
+                defensive_player.defense += round(random.uniform(0.25, 0.75), 2)
 
-            # Update defensive defense score
-            offensive_player.offense -= round(random.uniform(0.05, 0.2), 2)
+                # Update defensive defense score
+                offensive_player.offense -= round(random.uniform(0.05, 0.2), 2)
 
-            winner = defensive_player
-            case = 2
+                winner = defensive_player
+                case = 2
 
-        # Case 3: everyone dies
-        elif result_num <= 75 and len(self.players) > 2:
-            # Eliminate offensive and defensive players
-            self.eliminate_player(offensive_player)
-            self.eliminate_player(defensive_player)
+            # Case 3: everyone dies
+            elif result_num <= 75 and len(self.players) > 2:
+                # Eliminate offensive and defensive players
+                self.eliminate_player(offensive_player)
+                self.eliminate_player(defensive_player)
 
-            # Update stats
-            self.update_stats(offensive_player, "attempted_attacks", 1)
-            self.update_stats(defensive_player, "attempted_defenses", 1)
+                # Update stats
+                self.update_stats(offensive_player, "attempted_attacks", 1)
+                self.update_stats(defensive_player, "attempted_defenses", 1)
 
-            # Update attacker offense score
-            offensive_player.offense -= round(random.uniform(0.05, 0.2) ,2)
+                # Update attacker offense score
+                offensive_player.offense -= round(random.uniform(0.05, 0.2), 2)
 
-            # Update defensive defense score
-            defensive_player.defense -= round(random.uniform(0.05, 0.2), 2)
+                # Update defensive defense score
+                defensive_player.defense -= round(random.uniform(0.05, 0.2), 2)
 
-            winner = None
-            case = 3
+                winner = None
+                case = 3
 
-        # Case 0: no one dies (note we went back to 0)
-        # This is also to ensure that something happens in this turn, instead of not fitting a condition and having
-        # nothing happen
-        else:
-            # Update stats
-            self.update_stats(offensive_player, "attempted_attacks", 1)
-            self.update_stats(defensive_player, "attempted_defenses", 1)
+            # Case 0: no one dies (note we went back to 0)
+            # This is also to ensure that something happens in this turn, instead of not fitting a condition and having
+            # nothing happen
+            else:
+                # Update stats
+                self.update_stats(offensive_player, "attempted_attacks", 1)
+                self.update_stats(defensive_player, "attempted_defenses", 1)
 
-            winner = None
-            case = 0
+                winner = None
+                case = 0
 
         # Increase amount of rounds survived by 1
         for player in self.players:
