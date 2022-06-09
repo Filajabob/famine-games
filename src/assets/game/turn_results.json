@@ -11,6 +11,6 @@
   "{o} missed a punch and toppled off the tree they were fighting on (where else could you fight?)"],
   "3": ["{o} stabbed {d}, but {d} isn't dead yet, and stabs {o} back. They both died of their wounds.",
     "They both run into each other and they fall off a cliff. How romantic. And tragic.",
-    "{o} was about to stab {d}, but {o} falls in love with {d}, but {d} fell into a ravine in front of {o}'s eyes.\n{o} jumps into the ravine, overflowing with grief.",
-  "{o} missed the bow shot, and {d} gets mad and charges at {o}, both of them falling into a convenient {o}-sized hole."]
+    "{o} was about to stab {d}, but {o} falls in love with {d}. {d} falls into a ravine in front of {o}'s eyes.\n{o} jumps into the ravine, overflowing with grief.",
+  "{o} misses a bow shot, and {d} gets mad and charges at {o}, both of them falling into a convenient {o}-sized hole."]
 }

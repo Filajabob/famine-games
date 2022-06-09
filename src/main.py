@@ -33,7 +33,8 @@ else:
 
     utils.typewriter_print("Good! Time to start!")
 
-utils.typewriter_print("Disclaimer: No harm or offense is intended. May contain inappropriate or offensive content.", end='\n')
+utils.typewriter_print("Disclaimer: No harm or offense is intended. May contain inappropriate or offensive content.",
+                       end='\n')
 
 game = Game(players)
 
@@ -62,7 +63,7 @@ while game.can_run():
         )
     )
 
-    time.sleep(0.5)
+    time.sleep(0.75)
 
     # Print attack (cosmetic)
     utils.typewriter_print(
@@ -71,7 +72,7 @@ while game.can_run():
         )
     )
 
-    time.sleep(0.5)
+    time.sleep(0.75)
 
     # Print results (necessary)
     utils.typewriter_print(
@@ -81,9 +82,16 @@ while game.can_run():
         )
     )
 
+    # Print survivors if there are 10 or less people
+    if len(game.players) <= 10:
+        utils.typewriter_print(f"\nPlayers left\n")
+
+        for player in game.players:
+            utils.typewriter_print(f"{player.name}: {game.stats[player.name]['total_kills']} kills this game")
+
     print("")
 
-    time.sleep(1)
+    time.sleep(1.5)
 
     day += 1
 

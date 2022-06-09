@@ -132,6 +132,12 @@ class Game:
             self.update_stats(offensive_player, "attempted_attacks", 1)
             self.update_stats(offensive_player, "kills_off_attacks", 1)
 
+            # Update attacker attack score
+            offensive_player.offense += round(random.uniform(0.25, 0.75), 2)
+
+            # Update defensive defense score
+            defensive_player.defense -= round(random.uniform(0.05, 0.2), 2)
+
             winner = offensive_player
             case = 1
 
@@ -146,6 +152,12 @@ class Game:
             self.update_stats(defensive_player, "attempted_defenses", 1)
             self.update_stats(defensive_player, "kills_off_defenses", 1)
 
+            # Update attacker attack score
+            defensive_player.defense += round(random.uniform(0.25, 0.75), 2)
+
+            # Update defensive defense score
+            offensive_player.offense -= round(random.uniform(0.05, 0.2), 2)
+
             winner = defensive_player
             case = 2
 
@@ -158,6 +170,12 @@ class Game:
             # Update stats
             self.update_stats(offensive_player, "attempted_attacks", 1)
             self.update_stats(defensive_player, "attempted_defenses", 1)
+
+            # Update attacker offense score
+            offensive_player.offense -= round(random.uniform(0.05, 0.2) ,2)
+
+            # Update defensive defense score
+            defensive_player.defense -= round(random.uniform(0.05, 0.2), 2)
 
             winner = None
             case = 3

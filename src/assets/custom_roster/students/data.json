@@ -1,17 +1,17 @@
 {
     "Elliot": {
         "name": "Elliot",
-        "offense": 0,
-        "defense": 0,
+        "offense": 0.59,
+        "defense": 0.52,
         "stats": {
-            "total_kills": 4,
-            "successful_defenses": 2,
-            "attempted_attacks": 5,
-            "attempted_defenses": 3,
-            "kills_off_attacks": 2,
-            "kills_off_defenses": 2,
+            "total_kills": 6,
+            "successful_defenses": 3,
+            "attempted_attacks": 7,
+            "attempted_defenses": 4,
+            "kills_off_attacks": 3,
+            "kills_off_defenses": 3,
             "kills_off_interventions": 0,
-            "rounds_survived": 39,
+            "rounds_survived": 59,
             "wins": 0,
             "total_games": 0
         }
@@ -23,29 +23,29 @@
         "stats": {
             "total_kills": 6,
             "successful_defenses": 3,
-            "attempted_attacks": 5,
+            "attempted_attacks": 6,
             "attempted_defenses": 5,
             "kills_off_attacks": 3,
             "kills_off_defenses": 3,
             "kills_off_interventions": 0,
-            "rounds_survived": 31,
+            "rounds_survived": 42,
             "wins": 0,
             "total_games": 0
         }
     },
     "Aisha": {
         "name": "Aisha",
-        "offense": 0,
+        "offense": 0.5,
         "defense": 0,
         "stats": {
-            "total_kills": 2,
+            "total_kills": 3,
             "successful_defenses": 2,
-            "attempted_attacks": 1,
+            "attempted_attacks": 2,
             "attempted_defenses": 3,
-            "kills_off_attacks": 0,
+            "kills_off_attacks": 1,
             "kills_off_defenses": 2,
             "kills_off_interventions": 0,
-            "rounds_survived": 36,
+            "rounds_survived": 72,
             "wins": 0,
             "total_games": 0
         }
@@ -62,7 +62,7 @@
             "kills_off_attacks": 1,
             "kills_off_defenses": 2,
             "kills_off_interventions": 0,
-            "rounds_survived": 25,
+            "rounds_survived": 47,
             "wins": 0,
             "total_games": 0
         }
@@ -74,12 +74,12 @@
         "stats": {
             "total_kills": 0,
             "successful_defenses": 0,
-            "attempted_attacks": 1,
-            "attempted_defenses": 2,
+            "attempted_attacks": 2,
+            "attempted_defenses": 3,
             "kills_off_attacks": 0,
             "kills_off_defenses": 0,
             "kills_off_interventions": 0,
-            "rounds_survived": 7,
+            "rounds_survived": 33,
             "wins": 0,
             "total_games": 0
         }
@@ -92,45 +92,45 @@
             "total_kills": 2,
             "successful_defenses": 1,
             "attempted_attacks": 2,
-            "attempted_defenses": 5,
+            "attempted_defenses": 6,
             "kills_off_attacks": 1,
             "kills_off_defenses": 1,
             "kills_off_interventions": 0,
-            "rounds_survived": 25,
+            "rounds_survived": 27,
             "wins": 0,
             "total_games": 0
         }
     },
     "Spencer": {
         "name": "Spencer",
-        "offense": -5,
-        "defense": 5,
+        "offense": -4.32,
+        "defense": 5.84,
         "stats": {
-            "total_kills": 1,
-            "successful_defenses": 1,
-            "attempted_attacks": 1,
-            "attempted_defenses": 1,
-            "kills_off_attacks": 0,
-            "kills_off_defenses": 1,
+            "total_kills": 4,
+            "successful_defenses": 3,
+            "attempted_attacks": 4,
+            "attempted_defenses": 3,
+            "kills_off_attacks": 1,
+            "kills_off_defenses": 3,
             "kills_off_interventions": 0,
-            "rounds_survived": 15,
+            "rounds_survived": 61,
             "wins": 0,
             "total_games": 0
         }
     },
     "Xander": {
         "name": "Xander",
-        "offense": 0,
+        "offense": 0.52,
         "defense": 0,
         "stats": {
-            "total_kills": 1,
+            "total_kills": 2,
             "successful_defenses": 1,
-            "attempted_attacks": 1,
-            "attempted_defenses": 5,
-            "kills_off_attacks": 0,
+            "attempted_attacks": 3,
+            "attempted_defenses": 6,
+            "kills_off_attacks": 1,
             "kills_off_defenses": 1,
             "kills_off_interventions": 0,
-            "rounds_survived": 9,
+            "rounds_survived": 38,
             "wins": 0,
             "total_games": 0
         }
@@ -142,29 +142,29 @@
         "stats": {
             "total_kills": 0,
             "successful_defenses": 0,
-            "attempted_attacks": 1,
-            "attempted_defenses": 2,
+            "attempted_attacks": 2,
+            "attempted_defenses": 3,
             "kills_off_attacks": 0,
             "kills_off_defenses": 0,
             "kills_off_interventions": 0,
-            "rounds_survived": 44,
+            "rounds_survived": 72,
             "wins": 0,
             "total_games": 0
         }
     },
     "Milix": {
         "name": "Milix",
-        "offense": 0,
-        "defense": 0,
+        "offense": 2.62,
+        "defense": 1.17,
         "stats": {
-            "total_kills": 2,
-            "successful_defenses": 1,
-            "attempted_attacks": 1,
-            "attempted_defenses": 4,
-            "kills_off_attacks": 1,
-            "kills_off_defenses": 1,
+            "total_kills": 9,
+            "successful_defenses": 3,
+            "attempted_attacks": 6,
+            "attempted_defenses": 8,
+            "kills_off_attacks": 6,
+            "kills_off_defenses": 3,
             "kills_off_interventions": 0,
-            "rounds_survived": 38,
+            "rounds_survived": 80,
             "wins": 0,
             "total_games": 0
         }
@@ -172,50 +172,50 @@
     "Muhammad": {
         "name": "Muhammad",
         "offense": 0,
-        "defense": 0,
+        "defense": 0.53,
         "stats": {
-            "total_kills": 3,
-            "successful_defenses": 2,
-            "attempted_attacks": 4,
-            "attempted_defenses": 2,
+            "total_kills": 4,
+            "successful_defenses": 3,
+            "attempted_attacks": 5,
+            "attempted_defenses": 3,
             "kills_off_attacks": 1,
-            "kills_off_defenses": 2,
+            "kills_off_defenses": 3,
             "kills_off_interventions": 0,
-            "rounds_survived": 24,
+            "rounds_survived": 70,
             "wins": 0,
             "total_games": 0
         }
     },
     "Malik": {
         "name": "Malik",
-        "offense": 0,
+        "offense": 0.28,
         "defense": 0,
         "stats": {
-            "total_kills": 0,
+            "total_kills": 1,
             "successful_defenses": 0,
-            "attempted_attacks": 0,
-            "attempted_defenses": 2,
-            "kills_off_attacks": 0,
+            "attempted_attacks": 2,
+            "attempted_defenses": 4,
+            "kills_off_attacks": 1,
             "kills_off_defenses": 0,
             "kills_off_interventions": 0,
-            "rounds_survived": 17,
+            "rounds_survived": 55,
             "wins": 0,
             "total_games": 0
         }
     },
     "Vissar": {
         "name": "Vissar",
-        "offense": 0,
-        "defense": 0,
+        "offense": 1.82,
+        "defense": 1.11,
         "stats": {
-            "total_kills": 2,
-            "successful_defenses": 1,
-            "attempted_attacks": 4,
-            "attempted_defenses": 2,
-            "kills_off_attacks": 1,
-            "kills_off_defenses": 1,
+            "total_kills": 7,
+            "successful_defenses": 3,
+            "attempted_attacks": 8,
+            "attempted_defenses": 4,
+            "kills_off_attacks": 4,
+            "kills_off_defenses": 3,
             "kills_off_interventions": 0,
-            "rounds_survived": 27,
+            "rounds_survived": 53,
             "wins": 0,
             "total_games": 0
         }
@@ -223,16 +223,16 @@
     "Phosa": {
         "name": "Phosa",
         "offense": 0,
-        "defense": 0,
+        "defense": 0.46,
         "stats": {
-            "total_kills": 5,
-            "successful_defenses": 3,
-            "attempted_attacks": 3,
-            "attempted_defenses": 7,
+            "total_kills": 6,
+            "successful_defenses": 4,
+            "attempted_attacks": 4,
+            "attempted_defenses": 9,
             "kills_off_attacks": 2,
-            "kills_off_defenses": 3,
+            "kills_off_defenses": 4,
             "kills_off_interventions": 0,
-            "rounds_survived": 45,
+            "rounds_survived": 86,
             "wins": 0,
             "total_games": 0
         }
@@ -244,29 +244,29 @@
         "stats": {
             "total_kills": 3,
             "successful_defenses": 3,
-            "attempted_attacks": 5,
-            "attempted_defenses": 5,
+            "attempted_attacks": 6,
+            "attempted_defenses": 6,
             "kills_off_attacks": 0,
             "kills_off_defenses": 3,
             "kills_off_interventions": 0,
-            "rounds_survived": 20,
+            "rounds_survived": 48,
             "wins": 0,
             "total_games": 0
         }
     },
     "Sam": {
         "name": "Sam",
-        "offense": 0,
+        "offense": 0.89,
         "defense": 0,
         "stats": {
-            "total_kills": 4,
+            "total_kills": 6,
             "successful_defenses": 3,
-            "attempted_attacks": 3,
+            "attempted_attacks": 5,
             "attempted_defenses": 6,
-            "kills_off_attacks": 1,
+            "kills_off_attacks": 3,
             "kills_off_defenses": 3,
             "kills_off_interventions": 0,
-            "rounds_survived": 47,
+            "rounds_survived": 71,
             "wins": 0,
             "total_games": 0
         }
@@ -274,16 +274,16 @@
     "Turner": {
         "name": "Turner",
         "offense": 5,
-        "defense": 5,
+        "defense": 5.58,
         "stats": {
-            "total_kills": 0,
-            "successful_defenses": 0,
+            "total_kills": 1,
+            "successful_defenses": 1,
             "attempted_attacks": 1,
-            "attempted_defenses": 2,
+            "attempted_defenses": 3,
             "kills_off_attacks": 0,
-            "kills_off_defenses": 0,
+            "kills_off_defenses": 1,
             "kills_off_interventions": 0,
-            "rounds_survived": 30,
+            "rounds_survived": 50,
             "wins": 0,
             "total_games": 0
         }
@@ -295,12 +295,12 @@
         "stats": {
             "total_kills": 1,
             "successful_defenses": 0,
-            "attempted_attacks": 3,
-            "attempted_defenses": 1,
+            "attempted_attacks": 4,
+            "attempted_defenses": 2,
             "kills_off_attacks": 1,
             "kills_off_defenses": 0,
             "kills_off_interventions": 0,
-            "rounds_survived": 7,
+            "rounds_survived": 19,
             "wins": 0,
             "total_games": 0
         }
@@ -312,12 +312,12 @@
         "stats": {
             "total_kills": 0,
             "successful_defenses": 0,
-            "attempted_attacks": 3,
+            "attempted_attacks": 5,
             "attempted_defenses": 1,
             "kills_off_attacks": 0,
             "kills_off_defenses": 0,
             "kills_off_interventions": 0,
-            "rounds_survived": 24,
+            "rounds_survived": 37,
             "wins": 0,
             "total_games": 0
         }
@@ -329,12 +329,12 @@
         "stats": {
             "total_kills": 3,
             "successful_defenses": 1,
-            "attempted_attacks": 3,
-            "attempted_defenses": 1,
+            "attempted_attacks": 4,
+            "attempted_defenses": 3,
             "kills_off_attacks": 2,
             "kills_off_defenses": 1,
             "kills_off_interventions": 0,
-            "rounds_survived": 41,
+            "rounds_survived": 74,
             "wins": 0,
             "total_games": 0
         }
@@ -346,12 +346,12 @@
         "stats": {
             "total_kills": 1,
             "successful_defenses": 0,
-            "attempted_attacks": 3,
+            "attempted_attacks": 4,
             "attempted_defenses": 1,
             "kills_off_attacks": 1,
             "kills_off_defenses": 0,
             "kills_off_interventions": 0,
-            "rounds_survived": 19,
+            "rounds_survived": 36,
             "wins": 0,
             "total_games": 0
         }
@@ -359,33 +359,33 @@
     "Jackson": {
         "name": "Jackson",
         "offense": 0,
-        "defense": 0,
+        "defense": 0.3,
         "stats": {
-            "total_kills": 0,
-            "successful_defenses": 0,
+            "total_kills": 1,
+            "successful_defenses": 1,
             "attempted_attacks": 1,
-            "attempted_defenses": 1,
+            "attempted_defenses": 3,
             "kills_off_attacks": 0,
-            "kills_off_defenses": 0,
+            "kills_off_defenses": 1,
             "kills_off_interventions": 0,
-            "rounds_survived": 16,
+            "rounds_survived": 41,
             "wins": 0,
             "total_games": 0
         }
     },
     "Maryam": {
         "name": "Maryam",
-        "offense": 0,
-        "defense": 0,
+        "offense": 0.52,
+        "defense": 0.41,
         "stats": {
-            "total_kills": 1,
-            "successful_defenses": 1,
-            "attempted_attacks": 2,
-            "attempted_defenses": 4,
-            "kills_off_attacks": 0,
-            "kills_off_defenses": 1,
+            "total_kills": 3,
+            "successful_defenses": 2,
+            "attempted_attacks": 5,
+            "attempted_defenses": 7,
+            "kills_off_attacks": 1,
+            "kills_off_defenses": 2,
             "kills_off_interventions": 0,
-            "rounds_survived": 41,
+            "rounds_survived": 84,
             "wins": 0,
             "total_games": 0
         }
@@ -398,28 +398,28 @@
             "total_kills": 2,
             "successful_defenses": 2,
             "attempted_attacks": 2,
-            "attempted_defenses": 3,
+            "attempted_defenses": 4,
             "kills_off_attacks": 0,
             "kills_off_defenses": 2,
             "kills_off_interventions": 0,
-            "rounds_survived": 19,
+            "rounds_survived": 41,
             "wins": 0,
             "total_games": 0
         }
     },
     "Ky": {
         "name": "Ky",
-        "offense": 0,
-        "defense": 0,
+        "offense": 0.28,
+        "defense": 0.7,
         "stats": {
-            "total_kills": 0,
-            "successful_defenses": 0,
-            "attempted_attacks": 1,
-            "attempted_defenses": 0,
-            "kills_off_attacks": 0,
-            "kills_off_defenses": 0,
+            "total_kills": 2,
+            "successful_defenses": 1,
+            "attempted_attacks": 2,
+            "attempted_defenses": 2,
+            "kills_off_attacks": 1,
+            "kills_off_defenses": 1,
             "kills_off_interventions": 0,
-            "rounds_survived": 22,
+            "rounds_survived": 48,
             "wins": 0,
             "total_games": 0
         }
@@ -436,24 +436,24 @@
             "kills_off_attacks": 0,
             "kills_off_defenses": 2,
             "kills_off_interventions": 0,
-            "rounds_survived": 24,
+            "rounds_survived": 36,
             "wins": 0,
             "total_games": 0
         }
     },
     "Angela": {
         "name": "Angela",
-        "offense": 0,
+        "offense": 1.1199999999999999,
         "defense": 0,
         "stats": {
-            "total_kills": 1,
+            "total_kills": 3,
             "successful_defenses": 0,
-            "attempted_attacks": 3,
-            "attempted_defenses": 1,
-            "kills_off_attacks": 1,
+            "attempted_attacks": 5,
+            "attempted_defenses": 3,
+            "kills_off_attacks": 3,
             "kills_off_defenses": 0,
             "kills_off_interventions": 0,
-            "rounds_survived": 25,
+            "rounds_survived": 51,
             "wins": 0,
             "total_games": 0
         }
@@ -470,7 +470,7 @@
             "kills_off_attacks": 3,
             "kills_off_defenses": 1,
             "kills_off_interventions": 0,
-            "rounds_survived": 23,
+            "rounds_survived": 51,
             "wins": 0,
             "total_games": 0
         }
@@ -482,12 +482,12 @@
         "stats": {
             "total_kills": 4,
             "successful_defenses": 1,
-            "attempted_attacks": 6,
+            "attempted_attacks": 7,
             "attempted_defenses": 4,
             "kills_off_attacks": 3,
             "kills_off_defenses": 1,
             "kills_off_interventions": 0,
-            "rounds_survived": 51,
+            "rounds_survived": 67,
             "wins": 0,
             "total_games": 0
         }
