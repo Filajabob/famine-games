@@ -1,4 +1,12 @@
 {
+  "-5": ["{i} jumps in, but they all got tired and had a sleepover.",
+    "{i} aims the bow, but the janitor told {i} to fuck off. {o} and {d} don't feel like fighting after that."],
+  "-4": ["{i} is about to commit double manslaughter, but {d} and {o} teams up and slices {i}'s head clean off.",
+    "{i} thought about killing {o} and {d}, but got sad and jumped into a river."],
+  "-3": ["{i} murders {o}, but after looking at {d}, {i} shows mercy and tarzans away.",
+    "{i} impales {o}, but {d} gets mad at {i} for stealing their kill, so {d} tries to fight back. {i} and {d} survived."],
+  "-2": ["{i} stabs {d}, but {o} hides in a bush. {i} leaves, satisfied with the kill."],
+  "-1": ["{i} absolutely slaughters {d} and {o}"],
   "0": ["{o} tripped while trying to assault {d}. Nothing happened except for minor embarrassment.",
     "{o} tries to attack {d}, but they got a boner and had to retreat.", "{o} gets scared and runs away like a wimp",
     "{o} tries to impale {d}, but a janitor forced them to settle their differences peacefully \n(that janitor doesn't want to clean up the blood, eh?)"],

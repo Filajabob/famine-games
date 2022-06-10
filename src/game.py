@@ -87,6 +87,7 @@ class Game:
         :return: dict: A dictionary with all the events that occurred during the turn.
             The case is an integer, which is like an exit code, that describes what happened.
             Positive is something involving the two parties, and negative is something involving more or none of them.
+                -5: No one dies (with intervener)
                 -4: Intervener gets killed by the offender and the defender
                 -3: Intervener kills the offender (attacker)
                 -2: Intervener kills the defender
@@ -116,17 +117,15 @@ class Game:
         # --- Actual battle logic ---
 
         # We ask for a random int between 1 and the second int in the ratio form of self.intervention_rate
-        if random.randint(1, self.intervention_rate.as_integer_ratio()[1]) == 1:
+        if random.randint(1, self.intervention_rate.as_integer_ratio()[1]) == 1 and len(self.players) > 2:
             # Someone will intervene!
             intervener = random.choice(self.players)
 
             # Ensure the intervener is not one of the parties already "in combat"
-            while intervener not in (offensive_player, defensive_player):
+            while intervener in (offensive_player, defensive_player):
                 intervener = random.choice(self.players)
 
             result_num = random.randint(1, 100)
-
-            # TODO: Add intervention stuff
 
             # Case -1: Intervener kills everyone
             if result_num <= 20 + intervener.intervention_score - \
@@ -151,6 +150,88 @@ class Game:
 
                 # Eliminate players
                 self.eliminate_players(offensive_player, defensive_player)
+
+                winner = intervener
+                case = -1
+
+            # Case -2: The intervener kills the defender
+            elif result_num <= 40 + intervener.intervention_score - defensive_player.defense:
+
+                # Update defender defense score
+                defensive_player.defense -= round(random.uniform(0.05, 0.2), 2)
+                # Update intervener intervention score
+                intervener.intervention_score += round(random.uniform(0.25, 0.75), 2)
+
+                # Update stats
+                self.update_stats(intervener, "total_kills", 1)
+                self.update_stats(intervener, "attempted_interventions", 1)
+                self.update_stats(intervener, "kills_off_interventions", 1)
+
+                self.update_stats(defensive_player, "attempted_defenses", 1)
+
+                # Eliminate defender
+                self.eliminate_player(defensive_player)
+
+                winner = intervener
+                case = -2
+
+            # Case -3: The intervener kills the attacker
+            elif result_num <= 60 + intervener.intervention_score - offensive_player.defense:
+                # Update defender defense score
+                offensive_player.defense -= round(random.uniform(0.05, 0.2), 2)
+                # Update intervener intervention score
+                intervener.intervention_score += round(random.uniform(0.25, 0.75), 2)
+
+                # Update stats
+                self.update_stats(intervener, "total_kills", 1)
+                self.update_stats(intervener, "attempted_interventions", 1)
+                self.update_stats(intervener, "kills_off_interventions", 1)
+
+                self.update_stats(offensive_player, "attempted_defenses", 1)
+
+                # Eliminate defender
+                self.eliminate_player(offensive_player)
+
+                winner = intervener
+                case = -3
+
+            # Case -4: The intervener gets killed by the offensive player and defensive player
+            elif result_num <= 80 - intervener.intervention_score + \
+                (offensive_player.defense + defensive_player.defense) / 2:
+
+                # Update scores
+                intervener.intervention_score -= round(random.uniform(0.05, 0.2), 2)
+                offensive_player.defense += round(random.uniform(0.25, 0.75), 2)
+                defensive_player.defense += round(random.uniform(0.25, 0.75), 2)
+
+                # Update stats
+                self.update_stats(intervener, "attempted_interventions", 1)
+
+                self.update_stats(offensive_player, "successful_defenses", 1)
+                self.update_stats(offensive_player, "attempted_defenses", 1)
+                self.update_stats(offensive_player, "kills_off_defenses", 1)
+
+                self.update_stats(defensive_player, "successful_defenses", 1)
+                self.update_stats(defensive_player, "attempted_defenses", 1)
+                self.update_stats(defensive_player, "kills_off_defenses", 1)
+
+                self.eliminate_player(intervener)
+
+                winner = (offensive_player, defensive_player)
+                case = -4
+
+            # Case -5: No one dies
+            else:
+                self.update_stats(offensive_player, "attempted_defenses", 1)
+                self.update_stats(offensive_player, "successful_defenses", 1)
+
+                self.update_stats(defensive_player, "attempted_defenses", 1)
+                self.update_stats(defensive_player, "successful_defenses", 1)
+
+                self.update_stats(intervener, "attempted_interventions", 1)
+
+                winner = None
+                case = -5
 
         else:
             # No intervener this turn

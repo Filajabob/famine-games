@@ -49,52 +49,74 @@ with open("assets/game/attacks.json", 'r') as f:
 with open("assets/game/turn_results.json", 'r') as f:
     turn_results_texts = json.load(f)
 
+with open("assets/game/intervention_attacks.json", 'r') as f:
+    intervention_attacks = json.load(f)
+
 day = 1
 
-while game.can_run():
-    utils.typewriter_print(f"Day {day}\n")
+try:
+    while game.can_run():
+        utils.typewriter_print(f"Day {day}\n")
 
-    turn_results = game.rotate()
+        turn_results = game.rotate()
 
-    # Print sighting (cosmetic)
-    utils.typewriter_print(
-        utils.replace_with_players(
-            random.choice(sightings), turn_results["attacker"], turn_results["defender"]
+        # Print sighting (cosmetic)
+        utils.typewriter_print(
+            utils.replace_with_players(
+                random.choice(sightings), turn_results["attacker"], turn_results["defender"]
+            )
         )
-    )
 
-    time.sleep(0.75)
+        time.sleep(0.75)
 
-    # Print attack (cosmetic)
-    utils.typewriter_print(
-        utils.replace_with_players(
-            random.choice(attacks), turn_results["attacker"], turn_results["defender"]
+        # Print attack (cosmetic)
+        utils.typewriter_print(
+            utils.replace_with_players(
+                random.choice(attacks), turn_results["attacker"], turn_results["defender"]
+            )
         )
-    )
 
-    time.sleep(0.75)
+        time.sleep(0.75)
 
-    # Print results (necessary)
-    utils.typewriter_print(
-        utils.replace_with_players(
-            random.choice(turn_results_texts[str(turn_results["case"])]), turn_results["attacker"],
-            turn_results["defender"]
+        # Print intervener attack if there is an intervention
+        if turn_results["intervener"]:
+            utils.typewriter_print(utils.replace_with_players(
+                random.choice(intervention_attacks), turn_results["attacker"], turn_results["defender"],
+                turn_results["intervener"]
+            ))
+
+            time.sleep(0.75)
+
+        # Print results (necessary)
+        utils.typewriter_print(
+            utils.replace_with_players(
+                random.choice(turn_results_texts[str(turn_results["case"])]), turn_results["attacker"],
+                turn_results["defender"], turn_results["intervener"]
+            )
         )
-    )
 
-    # Print survivors if there are 10 or less people
-    if len(game.players) <= 10:
-        utils.typewriter_print(f"\nPlayers left\n")
+        # Print survivors if there are 10 or less people
+        if len(game.players) <= 10:
+            print("")
+            utils.typewriter_print(f"Players left\n")
 
-        for player in game.players:
-            utils.typewriter_print(f"{player.name}: {game.stats[player.name]['total_kills']} kills this game")
+            for player in game.players:
+                print(f"{player.name}: {game.stats[player.name]['total_kills']} kills this game")
+                time.sleep(0.25)
 
-    print("")
+        print("")
 
-    time.sleep(1.5)
+        print(f"Players left: {len(game.players)}")
 
-    day += 1
+        print("")
+
+        time.sleep(1.5)
+
+        day += 1
+
+except KeyboardInterrupt:
+    utils.typewriter_print("Exiting...")
+    quit(-1)
 
 game.finish_game()
-
 utils.typewriter_print(f"The game has finished! The winner is {game.players[0].name}!")

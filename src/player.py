@@ -17,7 +17,7 @@ class Player:
         self.name = name
         self.offense = offense
         self.defense = defense
-        self.intevention_score = intervention_score
+        self.intervention_score = intervention_score
 
         self.json_file = json_file
 
@@ -27,6 +27,7 @@ class Player:
                 "successful_defenses": 0,  # amount of times this player survived an attack
                 "attempted_attacks": 0,
                 "attempted_defenses": 0,
+                "attempted_interventions": 0,
                 "kills_off_attacks": 0,  # amount of kills from attacks
                 "kills_off_defenses": 0,  # amount of kills from self-defense (defending)
                 "kills_off_interventions": 0,  # amount of kills from interventions,
@@ -47,7 +48,7 @@ class Player:
                 "name": self.name,
                 "offense": self.offense,
                 "defense": self.defense,
-                "intervention_score": self.intevention_score,
+                "intervention_score": self.intervention_score,
                 "stats": self.stats
             }
 
