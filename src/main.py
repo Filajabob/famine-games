@@ -115,6 +115,8 @@ try:
         day += 1
 
 except KeyboardInterrupt:
+    print("")
+    print("")
     utils.typewriter_print("Exiting...")
     quit(-1)
 
