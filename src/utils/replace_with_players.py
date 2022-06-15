@@ -1,5 +1,6 @@
 from player import Player
 
+# TODO: Make it possible to add stuff other than players to the text
 
 def replace_with_players(text, attacker: Player = None, defender: Player = None, intervener: Player = None):
     if attacker:

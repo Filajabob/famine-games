@@ -2,6 +2,7 @@ import random
 import fractions
 from player import Player
 from constants import Constants
+from event import Event, NoEvent
 
 
 class Game:
@@ -116,9 +117,14 @@ class Game:
 
         # --- Actual battle logic ---
 
+        if random.randint(1, Constants.EVENT_RATE.as_integer_ratio()[1]) == 1 and len(self.players) > 4:
+            event = Event(self.players, random.random())
+            event.choose_eliminated_players()
+
         # We ask for a random int between 1 and the second int in the ratio form of self.intervention_rate
-        if random.randint(1, self.intervention_rate.as_integer_ratio()[1]) == 1 and len(self.players) > 2:
+        elif random.randint(1, self.intervention_rate.as_integer_ratio()[1]) == 1 and len(self.players) > 2:
             # Someone will intervene!
+            event = None
             intervener = random.choice(self.players)
 
             # Ensure the intervener is not one of the parties already "in combat"
@@ -234,6 +240,7 @@ class Game:
                 case = -5
 
         else:
+            event = None
             # No intervener this turn
             intervener = None
 
@@ -319,5 +326,6 @@ class Game:
             "defender": defensive_player,
             "intervener": intervener,
             "case": case,
-            "winner": winner
+            "winner": winner,
+            "event": event
         }
