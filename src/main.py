@@ -16,7 +16,7 @@ players = []
 utils.typewriter_print("Welcome to the Famine Games!")
 
 if args.students:
-    utils.typewriter_print("Loading students of R7G...")
+    utils.typewriter_print("Loading students...")
     with open("assets/custom_roster/students/names.json", 'r') as f:
         names = json.load(f)  # sussy amogus
 
