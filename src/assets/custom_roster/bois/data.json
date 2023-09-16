@@ -1,0 +1,192 @@
+{
+    "Willis": {
+        "name": "Willis",
+        "offense": 31.010000000000005,
+        "defense": -7.510000000000001,
+        "intervention_score": 5.63,
+        "stats": {
+            "total_kills": 82,
+            "successful_defenses": 20,
+            "attempted_attacks": 91,
+            "attempted_defenses": 96,
+            "attempted_interventions": 30,
+            "kills_off_attacks": 51,
+            "kills_off_defenses": 10,
+            "kills_off_interventions": 24,
+            "rounds_survived": 641,
+            "wins": 18,
+            "total_games": 105
+        }
+    },
+    "Quinsun": {
+        "name": "Quinsun",
+        "offense": 4.14,
+        "defense": -4.999999999999999,
+        "intervention_score": 6.3,
+        "stats": {
+            "total_kills": 51,
+            "successful_defenses": 19,
+            "attempted_attacks": 63,
+            "attempted_defenses": 88,
+            "attempted_interventions": 22,
+            "kills_off_attacks": 18,
+            "kills_off_defenses": 12,
+            "kills_off_interventions": 24,
+            "rounds_survived": 458,
+            "wins": 8,
+            "total_games": 105
+        }
+    },
+    "Liam": {
+        "name": "Liam",
+        "offense": 1.6500000000000008,
+        "defense": -4.14,
+        "intervention_score": 22.770000000000003,
+        "stats": {
+            "total_kills": 70,
+            "successful_defenses": 19,
+            "attempted_attacks": 74,
+            "attempted_defenses": 78,
+            "attempted_interventions": 29,
+            "kills_off_attacks": 23,
+            "kills_off_defenses": 11,
+            "kills_off_interventions": 39,
+            "rounds_survived": 547,
+            "wins": 12,
+            "total_games": 105
+        }
+    },
+    "Harrison": {
+        "name": "Harrison",
+        "offense": 21.959999999999997,
+        "defense": 6.560000000000001,
+        "intervention_score": 14.200000000000003,
+        "stats": {
+            "total_kills": 86,
+            "successful_defenses": 31,
+            "attempted_attacks": 103,
+            "attempted_defenses": 106,
+            "attempted_interventions": 26,
+            "kills_off_attacks": 39,
+            "kills_off_defenses": 22,
+            "kills_off_interventions": 28,
+            "rounds_survived": 609,
+            "wins": 17,
+            "total_games": 105
+        }
+    },
+    "Alex": {
+        "name": "Alex",
+        "offense": 19.20999999999999,
+        "defense": -13.45,
+        "intervention_score": -5.079999999999999,
+        "stats": {
+            "total_kills": 45,
+            "successful_defenses": 13,
+            "attempted_attacks": 77,
+            "attempted_defenses": 74,
+            "attempted_interventions": 16,
+            "kills_off_attacks": 30,
+            "kills_off_defenses": 4,
+            "kills_off_interventions": 12,
+            "rounds_survived": 460,
+            "wins": 6,
+            "total_games": 105
+        }
+    },
+    "Noah": {
+        "name": "Noah",
+        "offense": 23.539999999999992,
+        "defense": -17.56,
+        "intervention_score": 5.17,
+        "stats": {
+            "total_kills": 59,
+            "successful_defenses": 18,
+            "attempted_attacks": 93,
+            "attempted_defenses": 90,
+            "attempted_interventions": 19,
+            "kills_off_attacks": 36,
+            "kills_off_defenses": 4,
+            "kills_off_interventions": 21,
+            "rounds_survived": 515,
+            "wins": 8,
+            "total_games": 105
+        }
+    },
+    "Lucas": {
+        "name": "Lucas",
+        "offense": 32.21000000000001,
+        "defense": 5.120000000000003,
+        "intervention_score": -2.9499999999999984,
+        "stats": {
+            "total_kills": 95,
+            "successful_defenses": 37,
+            "attempted_attacks": 102,
+            "attempted_defenses": 106,
+            "attempted_interventions": 24,
+            "kills_off_attacks": 58,
+            "kills_off_defenses": 24,
+            "kills_off_interventions": 17,
+            "rounds_survived": 641,
+            "wins": 21,
+            "total_games": 105
+        }
+    },
+    "Sabiq": {
+        "name": "Sabiq",
+        "offense": -6.939999999999998,
+        "defense": -14.759999999999993,
+        "intervention_score": 11.870000000000003,
+        "stats": {
+            "total_kills": 40,
+            "successful_defenses": 7,
+            "attempted_attacks": 36,
+            "attempted_defenses": 73,
+            "attempted_interventions": 25,
+            "kills_off_attacks": 12,
+            "kills_off_defenses": 4,
+            "kills_off_interventions": 26,
+            "rounds_survived": 460,
+            "wins": 3,
+            "total_games": 105
+        }
+    },
+    "Jacob": {
+        "name": "Jacob",
+        "offense": 21.089999999999993,
+        "defense": -12.700000000000006,
+        "intervention_score": 9.89,
+        "stats": {
+            "total_kills": 58,
+            "successful_defenses": 19,
+            "attempted_attacks": 86,
+            "attempted_defenses": 92,
+            "attempted_interventions": 10,
+            "kills_off_attacks": 38,
+            "kills_off_defenses": 11,
+            "kills_off_interventions": 11,
+            "rounds_survived": 538,
+            "wins": 7,
+            "total_games": 105
+        }
+    },
+    "Ben": {
+        "name": "Ben",
+        "offense": 2.3,
+        "defense": -7.280000000000004,
+        "intervention_score": 6.76,
+        "stats": {
+            "total_kills": 50,
+            "successful_defenses": 16,
+            "attempted_attacks": 64,
+            "attempted_defenses": 78,
+            "attempted_interventions": 19,
+            "kills_off_attacks": 25,
+            "kills_off_defenses": 9,
+            "kills_off_interventions": 21,
+            "rounds_survived": 518,
+            "wins": 10,
+            "total_games": 105
+        }
+    }
+}

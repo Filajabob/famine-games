@@ -1,27 +1,30 @@
 import time
 import random
 import json
-import argparse
+import os
 
 from player import Player, load
 from game import Game
 import utils
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--students', action=argparse.BooleanOptionalAction)
-args = parser.parse_args()
-
 players = []
 
 utils.typewriter_print("Welcome to the Famine Games!")
+roster_name = utils.typewriter_input("Input a roster name, or leave blank to build a temporary one: ")
+roster_fp = f"assets/custom_roster/{roster_name}"
 
-if args.students:
-    utils.typewriter_print("Loading students...")
-    with open("assets/custom_roster/students/names.json", 'r') as f:
+if len(roster_fp) != 0:
+    if not os.path.exists(roster_fp):
+        raise KeyError("Roster does not exist.")
+
+    utils.typewriter_print("Loading roster...")
+    roster_data = roster_fp + "/data.json"
+
+    with open(roster_data, 'r') as f:
         names = json.load(f)  # sussy amogus
 
     for player_name in names:
-        players.append(load(json_file="assets/custom_roster/students/data.json", player_name=player_name))
+        players.append(load(json_file=roster_data, player_name=player_name))
 
 else:
     amount_of_players = int(utils.typewriter_input("How many players should we have? "))

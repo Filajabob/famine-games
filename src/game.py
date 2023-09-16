@@ -32,7 +32,9 @@ class Game:
                 "kills_off_defenses": 0,  # amount of kills from self-defense (defending)
                 "kills_off_interventions": 0,  # amount of kills from interventions,
                 "rounds_survived": 0,  # amount of rounds survived
-                "alive": True  # if the player is alive
+                "alive": True,  # if the player is alive,
+                "total_games": 0,
+                "wins": 0
             }
 
     def can_run(self):
@@ -74,7 +76,10 @@ class Game:
         :return: None
         """
 
+        self.update_stats(self.players[0], "wins", 1)
+
         for player in self.player_archive:
+            self.update_stats(player, "total_games", 1)
             player.serialize(file=player.json_file)
 
         self.manually_finished = True

@@ -38,9 +38,15 @@ class Player:
         else:
             self.stats = stats
 
-    def serialize(self, file):
+    def serialize(self, file=None):
         if not file:
-            return
+            return {
+                "name": self.name,
+                "offense": self.offense,
+                "defense": self.defense,
+                "intervention_score": self.intervention_score,
+                "stats": self.stats
+            }
 
         with open(file, 'r+') as f:
             data = json.load(f)
