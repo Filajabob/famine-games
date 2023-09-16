@@ -1,6 +1,13 @@
 {
+<<<<<<< HEAD
   "0.25": ["The water got poisoned"],
   "0.5": ["A famine sweeps through the region"],
   "0.75": ["Flying unicorns of fear attack the players"],
   "0.95": ["A meteor of doom strikes the land"]
+=======
+  "0.25": ["The water got poisoned, and some people drank it and got the good ol' death treatment"],
+  "0.5": ["So its a beautiful day here. Green leaves, blue skies, and FLYING DINOSAURS?!?!?"],
+  "0.75": ["Alright I'm just gonna take a break and-. Um. I just pressed a red button. That can't be good-"],
+  "0.95": ["A meteor burns through the sky and absolutely blows the arena sky high. Uh, who's paying for that?"]
+>>>>>>> 2ce9c75ab2fa8c1c558cd0e41cee2c205fd93991
 }
